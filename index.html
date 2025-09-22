@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
     <title>Dashboard Keuangan</title>
     <style>
         * {
@@ -456,6 +457,7 @@
                     <a href="#Assets">Assets</a>
                     <a href="#dvsc">Debit vs Credit</a>
                     <a href="#expense">Expense</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScR1LuVsv2ayoRJ7uQ0s2TrfC3GWrQkON74UgVE9S0RwmJWIA/viewform?usp=preview">Input</a>
                 </nav>
             </div>
         </div>
@@ -546,6 +548,34 @@
     </main>
 
     <script>
+        const CACHE_NAME = 'cache-v1';
+        const urlsToCache = [
+        '/',
+        '/index.html',
+        '/styles.css',
+        '/script.js'
+        ];
+
+        self.addEventListener('install', event => {
+        event.waitUntil(
+            caches.open(CACHE_NAME)
+            .then(cache => {
+                return cache.addAll(urlsToCache);
+            })
+        );
+        });
+
+        self.addEventListener('fetch', event => {
+        event.respondWith(
+            caches.match(event.request)
+            .then(response => {
+                if (response) {
+                return response;
+                }
+                return fetch(event.request);
+            })
+        );
+        });
         // Simple loading state management
         document.addEventListener('DOMContentLoaded', function() {
             // Add smooth scrolling for navigation
