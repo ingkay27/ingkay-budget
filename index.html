@@ -453,10 +453,9 @@
             <div class="header-content">
                 <a href="#" class="logo">Dashboard Keuangan</a>
                 <nav class="nav">
-                    <a href="#overview">Overview</a>
-                    <a href="#analytics">Analytics</a>
-                    <a href="#reports">Reports</a>
-                    <a href="#settings">Settings</a>
+                    <a href="#Assets">Assets</a>
+                    <a href="#dvsc">Debit vs Credit</a>
+                    <a href="#expense">Expense</a>
                 </nav>
             </div>
         </div>
@@ -468,7 +467,6 @@
                 <h1>Analisis Keuangan Personal</h1>
                 <p>Pantau dan kelola keuangan Anda dengan visualisasi data yang komprehensif dan mudah dipahami</p>
             </section>
-
             <!-- <section class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number">Rp 45.2M</div>
@@ -487,13 +485,11 @@
                     <div class="stat-label">Return Rate</div>
                 </div>
             </section> -->
-
-            <section class="dashboard-section" id="overview">
-                <h2 class="section-title">Financial Overview</h2>
+            <section class="dashboard-section" id="Assets">
                 <div class="chart-container">
                     <div class="chart-header">
-                        <h3 class="chart-title">Diagram Keuangan Komprehensif</h3>
-                        <span class="chart-info">Data terbaru: September 2025</span>
+                        <h3 class="chart-title">Detail Assets</h3>
+                        <span class="chart-info">Ingkay-Budget</span>
                     </div>
                     <!-- Responsive iframe container -->
                     <div class="iframe-adaptive iframe-portrait">
@@ -508,18 +504,42 @@
                     -->
                 </div>
             </section>
-
-            <section class="dashboard-section" id="analytics">
-                <h2 class="section-title">Detailed Analytics</h2>
+            <section class="dashboard-section" id="dvsc">
                 <div class="chart-container">
                     <div class="chart-header">
-                        <h3 class="chart-title">Analisis Mendalam</h3>
-                        <span class="chart-info">Performa bulanan</span>
+                        <h3 class="chart-title">Debit "Pengeluaran" vs Credit "Pemasukan"</h3>
+                        <span class="chart-info">Ingkay-Budget</span>
                     </div>
-                    <div class="iframe-container iframe-landscape">
-                        
-                        <iframe class="chart-iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSn1DzAu5j-AtuYEYjcesK0IK5KKrHlsi9QikMEEr9OHBfotfUGOxedkXud_NVh-Lvo98OdhDbe6U96/pubchart?oid=291350498&format=interactive" title="Financial Chart"></iframe>
+                    <!-- Responsive iframe container -->
+                    <div class="iframe-adaptive iframe-portrait">
+                        <iframe class="chart-iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSn1DzAu5j-AtuYEYjcesK0IK5KKrHlsi9QikMEEr9OHBfotfUGOxedkXud_NVh-Lvo98OdhDbe6U96/pubchart?oid=575271963&format=interactive" title="Financial Chart"></iframe>
                     </div>
+                    <!-- 
+                    Cara penggunaan:
+                    1. Ganti "your-spreadsheet-url" dengan URL iframe Anda
+                    2. Untuk diagram landscape gunakan class "iframe-landscape" 
+                    3. Untuk diagram portrait gunakan class "iframe-portrait"
+                    4. Untuk rasio 16:9 standar, hilangkan class tambahan (default)
+                    -->
+                </div>
+            </section>
+            <section class="dashboard-section" id="expense">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Detail Expense</h3>
+                        <span class="chart-info">Ingkay-Budget</span>
+                    </div>
+                    <!-- Responsive iframe container -->
+                    <div class="iframe-adaptive iframe-portrait">
+                        <iframe class="chart-iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSn1DzAu5j-AtuYEYjcesK0IK5KKrHlsi9QikMEEr9OHBfotfUGOxedkXud_NVh-Lvo98OdhDbe6U96/pubchart?oid=75083205&format=interactive" title="Financial Chart"></iframe>
+                    </div>
+                    <!-- 
+                    Cara penggunaan:
+                    1. Ganti "your-spreadsheet-url" dengan URL iframe Anda
+                    2. Untuk diagram landscape gunakan class "iframe-landscape" 
+                    3. Untuk diagram portrait gunakan class "iframe-portrait"
+                    4. Untuk rasio 16:9 standar, hilangkan class tambahan (default)
+                    -->
                 </div>
             </section>
         </div>
